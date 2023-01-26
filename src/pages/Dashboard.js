@@ -240,7 +240,7 @@ function Dashboard(props) {
                 >
                   <Form.Control
                     required
-                    type="text"
+                    type="number"
                     placeholder="Enter item price"
                     size="md"
                     value={currentMenuItem?.itemPrice}
