@@ -1,4 +1,4 @@
-import { db } from "../firestore";
+import { db } from "../FirebaseConfig";
 
 function getAllMenuItems() {
   return new Promise((resolve, reject) => {
