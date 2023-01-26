@@ -110,7 +110,7 @@ function Menu(props) {
               </Card.Body>
               <Card.Footer className="d-flex justify-content-between align-items-center">
                 <p style={{ marginTop: 8, fontSize: 12, color: "#A1A1A1" }}>
-                  © 2022 Nandos
+                  © 2023 FireFood
                 </p>
                 <p style={{ marginTop: 8, fontSize: 12, color: "#A1A1A1" }}>
                   <Link to="/login">Admin Login</Link> •{" "}
