@@ -159,6 +159,11 @@ function Menu(props) {
                         <ListGroup.Item>
                           User can login and logout
                         </ListGroup.Item>
+
+                        <ListGroup.Item>
+                          CI/CD: Automatically deployed on server when codes are
+                          pushed to github repository
+                        </ListGroup.Item>
                       </ListGroup>
                     </Accordion.Body>
                   </Accordion.Item>
