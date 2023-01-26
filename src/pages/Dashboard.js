@@ -122,6 +122,7 @@ function Dashboard(props) {
           .then(() => {
             // alert(`${itemName.value} is successfully updated.`);
             handleModalClose();
+            fetchMenuItems();
             // window.location.reload(false);
           })
           .catch((e) => {
@@ -150,7 +151,9 @@ function Dashboard(props) {
     fetchMenuItems();
   };
 
-  console.log(user);
+  useEffect(() => {
+    fetchMenuItems();
+  }, [addEditFormType]);
 
   return (
     <>
