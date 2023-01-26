@@ -122,7 +122,7 @@ function Dashboard(props) {
           .then(() => {
             // alert(`${itemName.value} is successfully updated.`);
             handleModalClose();
-            window.location.reload(false);
+            // window.location.reload(false);
           })
           .catch((e) => {
             alert("Error occured: " + e.message);
