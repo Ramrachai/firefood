@@ -1,4 +1,3 @@
-/* eslint-disable import/no-anonymous-default-export */
 import { db } from "../firestore";
 
 function getAllMenuItems() {
