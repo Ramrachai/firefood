@@ -15,7 +15,6 @@ import "firebase/compat/auth";
 
 import FirestoreService from "../utils/services/FirestoreService";
 import NotLoggedInView from "../components/NoLoggedInView";
-import { Link } from "react-router-dom";
 import LogoPic from "../assets/image/logo.jpg";
 
 function Dashboard(props) {

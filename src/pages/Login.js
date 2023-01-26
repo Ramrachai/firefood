@@ -55,7 +55,7 @@ function Login(props) {
   return (
     <>
       {user === null && (
-        <Card style={{ margin: 24, maxWidth: "600px", margin: "24px auto" }}>
+        <Card style={{ maxWidth: "600px", margin: "24px auto" }}>
           <Card.Header>
             <Image src={Lock} style={{ width: 80, marginBottom: 8 }} />
             <h4>Admin Login</h4>
