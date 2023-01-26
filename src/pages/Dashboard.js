@@ -128,6 +128,8 @@ function Dashboard(props) {
             alert("Error occured: " + e.message);
             setIsLoading(false);
           });
+
+        fetchMenuItems();
       }
     }
     setValidated(true);
