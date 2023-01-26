@@ -4,6 +4,9 @@ import { Card, Form, Button, Image } from "react-bootstrap";
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 
+import Logopic from "../assets/image/logo.jpg";
+import { Link } from "react-router-dom";
+
 function Login(props) {
   const [validate, setValidated] = useState(false);
   const [user, setUser] = useState(null);
@@ -25,7 +28,6 @@ function Login(props) {
       .then((userCredentails) => {
         //SignedIn User
         var user = userCredentails.user;
-        // alert("Login Successful");
         setUser(user);
         setValidated(true);
       })
@@ -41,7 +43,7 @@ function Login(props) {
       .signOut()
       .then(() => {
         //Signout Successful
-        alert("Logout Successful");
+        // alert("Logout Successful");
         setUser(null);
         setValidated(false);
       })
@@ -55,16 +57,11 @@ function Login(props) {
       {user === null && (
         <Card style={{ margin: 24 }}>
           <Card.Header>
-            <Image
-              src={
-                "https://upload.wikimedia.org/wikipedia/en/thumb/c/c5/Nandos_logo.svg/1200px-Nandos_logo.svg.png"
-              }
-              style={{ width: 80, marginBottom: 8 }}
-            />
+            <Image src={Logopic} style={{ width: 80, marginBottom: 8 }} />
             <h4>Admin Login</h4>
             <p style={{ marginTop: 8, fontSize: 12, color: "#A1A1A1" }}>
-              If you're an admin of Nandos please login below. If you don't have
-              an account please contact your administrator to get a login.
+              If you're an admin of Firefood please login below. If you don't
+              have an account please contact your administrator to get a login.
             </p>
           </Card.Header>
           <Card.Body>
@@ -105,9 +102,9 @@ function Login(props) {
             </Form>
           </Card.Body>
           <Card.Footer>
-            <a href="/" style={{ marginTop: 8, fontSize: 12 }}>
+            <Link to="/" style={{ marginTop: 8, fontSize: 12 }}>
               ← Back to homepage
-            </a>
+            </Link>
           </Card.Footer>
         </Card>
       )}

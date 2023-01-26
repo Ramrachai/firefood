@@ -19,7 +19,6 @@ ReactDOM.render(
       <Route exact path="/login" element={<Login />} />
       <Route exact path="/dashboard" element={<Dashboard />} />
     </Routes>
-
     <Footer />
   </BrowserRouter>,
   document.getElementById("root")
