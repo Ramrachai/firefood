@@ -399,7 +399,20 @@ function Dashboard(props) {
             </Card.Body>
             <Card.Footer className="d-flex justify-content-between align-items-center">
               <p style={{ marginTop: 8, fontSize: 12, color: "#A1A1A1" }}>
-                Fire Food Menu v1.1.1 - <Link to="/login">Logout</Link>
+                Fire Food Menu v1.1.1 -{" "}
+                <Button
+                  style={{
+                    backgroundColor: "transparent",
+                    border: "none",
+                    color: "darkBlue",
+                    padding: "0",
+                    margin: 0,
+                    fontSize: "14px",
+                  }}
+                  onClick={() => firebase.auth().signOut()}
+                >
+                  Logout
+                </Button>
               </p>
             </Card.Footer>
           </Card>

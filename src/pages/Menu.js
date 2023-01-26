@@ -59,8 +59,12 @@ function Menu(props) {
                     </p>
                   </span>
 
-                  <Button style={{ backgroundColor: "purple", borderWidth: 0 }}>
-                    Place Order
+                  <Button
+                    as={Link}
+                    to="/dashboard"
+                    style={{ backgroundColor: "purple", borderWidth: 0 }}
+                  >
+                    Dashboard
                   </Button>
                 </div>
               </Card.Header>

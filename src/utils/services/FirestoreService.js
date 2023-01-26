@@ -1,6 +1,6 @@
 import { db } from "../FirebaseConfig";
 
-function getAllMenuItems() {
+const getAllMenuItems = () => {
   return new Promise((resolve, reject) => {
     db.collection("menuItem")
       .get()
@@ -11,9 +11,9 @@ function getAllMenuItems() {
         reject(e);
       });
   });
-}
+};
 
-function getAllMenuCategories() {
+const getAllMenuCategories = () => {
   return new Promise((resolve, reject) => {
     db.collection("menuCategory")
       .get()
@@ -24,9 +24,9 @@ function getAllMenuCategories() {
         reject(e);
       });
   });
-}
+};
 
-function AddNewMenuItem(itemName, itemCategory, itemPrice) {
+const AddNewMenuItem = (itemName, itemCategory, itemPrice) => {
   return new Promise((resolve, reject) => {
     const data = {
       itemName: itemName,
@@ -43,9 +43,9 @@ function AddNewMenuItem(itemName, itemCategory, itemPrice) {
         reject(e);
       });
   });
-}
+};
 
-function UpateMenuItem(menuItemID, itemName, itemCategory, itemPrice) {
+const UpateMenuItem = (menuItemID, itemName, itemCategory, itemPrice) => {
   return new Promise((resolve, reject) => {
     const data = {
       itemName: itemName,
@@ -63,7 +63,7 @@ function UpateMenuItem(menuItemID, itemName, itemCategory, itemPrice) {
         reject(e);
       });
   });
-}
+};
 
 const DeleteMenuItem = (menuItemID) => {
   return new Promise((resolve, reject) => {
@@ -79,10 +79,12 @@ const DeleteMenuItem = (menuItemID) => {
   });
 };
 
-export default {
+const FirestoreService = {
   getAllMenuItems,
   getAllMenuCategories,
   AddNewMenuItem,
   UpateMenuItem,
   DeleteMenuItem,
 };
+
+export default FirestoreService;

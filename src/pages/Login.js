@@ -4,7 +4,7 @@ import { Card, Form, Button, Image } from "react-bootstrap";
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 
-import Logopic from "../assets/image/logo.jpg";
+import Lock from "../assets/image/lock.webp";
 import { Link } from "react-router-dom";
 
 function Login(props) {
@@ -55,13 +55,21 @@ function Login(props) {
   return (
     <>
       {user === null && (
-        <Card style={{ margin: 24 }}>
+        <Card style={{ margin: 24, maxWidth: "600px", margin: "24px auto" }}>
           <Card.Header>
-            <Image src={Logopic} style={{ width: 80, marginBottom: 8 }} />
+            <Image src={Lock} style={{ width: 80, marginBottom: 8 }} />
             <h4>Admin Login</h4>
             <p style={{ marginTop: 8, fontSize: 12, color: "#A1A1A1" }}>
               If you're an admin of Firefood please login below. If you don't
               have an account please contact your administrator to get a login.
+            </p>
+            <p>
+              {" "}
+              <span style={{ color: "darkmagenta" }}>
+                Email: test@test.com{" "}
+              </span>{" "}
+              &nbsp; &nbsp; &nbsp; &nbsp;{" "}
+              <span style={{ color: "darkorange" }}>Password: password</span>{" "}
             </p>
           </Card.Header>
           <Card.Body>
@@ -109,12 +117,19 @@ function Login(props) {
         </Card>
       )}
       {user !== null && (
-        <div style={{ margin: 24 }}>
-          <p>
-            You're loggedin successfully. Go to{" "}
-            <a href="/dashboard">dashboard</a>
-          </p>
-          <p>
+        <Card style={{ margin: "24px auto", maxWidth: "400px" }}>
+          <Card.Header>Login Status</Card.Header>
+          <Card.Body>
+            <p>
+              You're loggedin successfully. Now You can Go to{" "}
+              <Link to="/dashboard">dashboard</Link> and Add new items, update
+              or delete existing items.
+            </p>
+
+            <Button as={Link} to="/dashboard" className="outline-primary mx-4">
+              Enter DashBoard
+            </Button>
+
             <button
               className="btn btn-warning"
               variant="primary"
@@ -122,8 +137,8 @@ function Login(props) {
             >
               Click here to Logout
             </button>
-          </p>
-        </div>
+          </Card.Body>
+        </Card>
       )}
     </>
   );
