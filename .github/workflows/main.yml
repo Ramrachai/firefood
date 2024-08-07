@@ -29,3 +29,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           dangerous-clean-slate: true
           local-dir: ./build/
+          server-dir: /ramrachai.com/firefood
